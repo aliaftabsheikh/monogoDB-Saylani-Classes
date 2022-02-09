@@ -37,3 +37,15 @@
 <img src = "./assets/Mi-8.png">
 
 
+
+# Compass
+
+
+* ## if you download windows the compass included in community server. Other p.c example Mac'Os and linux you can download seperately.
+* ## Compass is a tool that can make you a gui. GUI means is Graphical user Interface.
+* ## Compass is a good representive tool that can show a all database data you can also perform query & you can change data.
+* ## Time of Installation mongpDB ask you to download compass if you check then download compass automatically.
+
+### How Compass looks like?
+
+<img src = "./assets/C-1.png">
