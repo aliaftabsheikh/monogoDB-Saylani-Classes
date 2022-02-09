@@ -15,7 +15,7 @@
 ## * Click on next.
 <img src = "./assets/Mi-1.png">
 
-## * Check box i accept the terms in the licenses agreement.
+* ##  Check box i accept the terms in the licenses agreement.
 <img src = "./assets/Mi-2.png">
 
 ## * Click on Complete.
