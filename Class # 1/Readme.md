@@ -55,9 +55,12 @@
 
 * ## Click on Next.
 <img src = "./assets/S-1.png">
+
 * ## if you have any solid reason to change the directory then change else set in default directory and Click on Next. 
 <img src = "./assets/S-2.png">
+
 * ##  Click to Install.
 <img src = "./assets/S-3.png">
+
 * ##  Congratulations mongoDB Shell is ready to use.
 <img src = "./assets/S-4.png">
