@@ -70,8 +70,8 @@
 
 # Basic Shell Commands
 
-* ## show dbs
+* ## Show dbs
 
-      ### show dbs shows 3 default databases.
-        
+### show dbs shows 3 default databases.
+
 <img src = "./assets/bs-1.png">
