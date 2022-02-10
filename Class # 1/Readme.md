@@ -75,3 +75,9 @@
 ### show dbs shows 3 default databases.
 
 <img src = "./assets/bs-1.png">
+
+* ## Create new Database
+
+### use shop create a new database shop is a database name you can place any word after use.
+
+<img src = "./assets/bs-2.png">
