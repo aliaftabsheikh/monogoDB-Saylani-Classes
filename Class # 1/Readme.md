@@ -1,4 +1,4 @@
-# [mongoDb](https://www.mongodb.com/)
+# [MongoDB](https://www.mongodb.com/)
 
 
 
@@ -44,8 +44,20 @@
 * ## if you download windows the compass included in community server. Other p.c example Mac'Os and linux you can download seperately.
 * ## Compass is a tool that can make you a gui. GUI means is Graphical user Interface.
 * ## Compass is a good representive tool that can show a all database data you can also perform query & you can change data.
-* ## Time of Installation mongpDB ask you to download compass if you check then download compass automatically.
+* ## Time of Installation mongoDB ask you to download compass if you check then download compass automatically.
 
 ### How Compass looks like?
 
 <img src = "./assets/C-1.png">
+
+
+# [Download MongoDB Shell](https://www.mongodb.com/try/download/shell)
+
+* ## Click on Next.
+<img src = "./assets/S-1.png">
+* ## if you have any solid reason to change the directory then change else set in default directory and Click on Next. 
+<img src = "./assets/S-2.png">
+* ##  Click to Install.
+<img src = "./assets/S-3.png">
+* ##  Congratulations mongoDB Shell is ready to use.
+<img src = "./assets/S-4.png">
