@@ -73,6 +73,10 @@
 * ## Show dbs
 
 ### show dbs shows 3 default databases.
+   
+     admin
+     config
+     local
 
 <img src = "./assets/bs-1.png">
 
