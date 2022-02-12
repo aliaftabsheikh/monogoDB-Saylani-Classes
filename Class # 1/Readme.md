@@ -135,3 +135,9 @@
 
             .pretty()
 
+## $gt
+
+           db.collectionName.find({age : {$gt : 18}})
+## $lt
+
+           db.collectionName.find({age : {$lt : 18}})
