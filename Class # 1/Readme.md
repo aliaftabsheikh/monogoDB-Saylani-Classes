@@ -85,3 +85,13 @@
 ### use shop create a new database shop is a database name you can place any word after use.
 
 <img src = "./assets/bs-2.png">
+
+
+# MongoDB Crud
+
+* ## Insert Data in Collection
+
+        db.collectionName.insertOne({Hello : "World"})
+
+
+        db.collectionName.insertMany([{name : "a"}, {name : "b"}])
