@@ -104,4 +104,10 @@
           db.collectionName.find([{name : "a"}, {name : "b"}])
 
 
-*\##
+* ## Updata Data in Collection
+           
+        db.collectionName.uddataOne({Hello : "World"}, {$set : {HelloWorld : true}})
+
+        db.collectionName.uddataMany({Hello : "World"}, {$set : {HelloWorld : true}})
+
+
