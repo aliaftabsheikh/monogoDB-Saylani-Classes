@@ -95,3 +95,13 @@
 
 
         db.collectionName.insertMany([{name : "a"}, {name : "b"}])
+
+
+* ## Find Data in Collection
+
+          db.collectionName.findOne({Hello : "World"})
+
+          db.collectionName.find([{name : "a"}, {name : "b"}])
+
+
+*\##
