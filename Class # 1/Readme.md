@@ -106,8 +106,15 @@
 
 * ## Updata Data in Collection
            
-        db.collectionName.uddataOne({Hello : "World"}, {$set : {HelloWorld : true}})
+        db.collectionName.updateOne({Hello : "World"}, {$set : {HelloWorld : true}})
 
-        db.collectionName.uddataMany({Hello : "World"}, {$set : {HelloWorld : true}})
+        db.collectionName.updateMany({Hello : "World"}, {$set : {HelloWorld : true}})
+
+
+* ## Delete Data in Collection
+           
+        db.collectionName.deleteOne({Hello : "World"}, {$set : {HelloWorld : true}})
+
+        db.collectionName.deleteMany({Hello : "World"}, {$set : {HelloWorld : true}})
 
 
