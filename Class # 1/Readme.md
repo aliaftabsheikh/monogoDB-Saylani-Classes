@@ -129,3 +129,9 @@
         db.collectionName.deleteMany({Hello : "World"}, {$set : {HelloWorld : true}})
 
 
+# Some Queries
+
+## Use for Beautiful and line by line data get in database.
+
+            .pretty()
+
