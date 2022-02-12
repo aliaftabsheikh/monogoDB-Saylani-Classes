@@ -54,15 +54,19 @@
 # [Download MongoDB Shell](https://www.mongodb.com/try/download/shell)
 
 * ## Click on Next.
+
 <img src = "./assets/S-1.png">
 
 * ## if you have any solid reason to change the directory then change else set in default directory and Click on Next. 
+
 <img src = "./assets/S-2.png">
 
 * ##  Click to Install.
+
 <img src = "./assets/S-3.png">
 
 * ##  Congratulations mongoDB Shell is ready to use.
+
 <img src = "./assets/S-4.png">
 
 
@@ -72,7 +76,7 @@
 
 * ## Show dbs
 
-### show dbs shows 3 default databases.
+### Show dbs shows 3 default databases.
    
      admin
      config
@@ -82,9 +86,16 @@
 
 * ## Create new Database
 
-### use shop create a new database shop is a database name you can place any word after use.
+### Use shop create a new database shop is a database name you can place any word after use.
 
 <img src = "./assets/bs-2.png">
+
+
+
+
+
+
+
 
 
 # MongoDB Crud
