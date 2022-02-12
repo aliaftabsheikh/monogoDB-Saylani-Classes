@@ -100,7 +100,7 @@
 
 # MongoDB Crud
 
-* ## Insert Data in Collection
+## Insert Data in Collection
 
         db.collectionName.insertOne({Hello : "World"})
 
@@ -108,21 +108,21 @@
         db.collectionName.insertMany([{name : "a"}, {name : "b"}])
 
 
-* ## Find Data in Collection
+## Find Data in Collection
 
           db.collectionName.findOne({Hello : "World"})
 
           db.collectionName.find([{name : "a"}, {name : "b"}])
 
 
-* ## Updata Data in Collection
+## Updata Data in Collection
            
         db.collectionName.updateOne({Hello : "World"}, {$set : {HelloWorld : true}})
 
         db.collectionName.updateMany({Hello : "World"}, {$set : {HelloWorld : true}})
 
 
-* ## Delete Data in Collection
+## Delete Data in Collection
            
         db.collectionName.deleteOne({Hello : "World"}, {$set : {HelloWorld : true}})
 
