@@ -1,12 +1,15 @@
 const Product = require("../models/product");
 
 exports.getAddProduct = (req, res) => {
-    res.render("form", { title: "Add Product Form" });
+    res.render("form", { title:"Add Product Form" });
 };
 
 exports.postAddProduct = async (req, res) => {
-    const product = new Product(req.body.title);
-    console.log(req.body.title);
+    const product = new Product();
+    product.title = req.body.title
+    product.price= 100;
+    product.ratings= 4.2;
+    product.inStock = true;
     await product.save();
     res.send("Saved");
 };
