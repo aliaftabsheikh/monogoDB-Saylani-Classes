@@ -13,9 +13,14 @@ class Product {
     }
 
     static async fetchAll () {
-        const products = getConnect().db().collection("products")
-        return await products.find();
-        
+        const products = [];
+        const productsConnect = getConnect().db().collection("products")
+        const productsCursor =  await productsConnect.find();
+        await productsCursor.forEach(product => {
+            console.log(product);
+            products.push(product)
+        });
+        return products;
     }
 }
 
