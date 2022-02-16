@@ -6,10 +6,10 @@ const { authMiddleware } = require('../middlewares/auth')
 const router = express.Router();
 
 
-router.get("/", authMiddleware, productsController.fetchAll);
+router.get("/",  productsController.fetchAll);
 
-router.get("/form", authMiddleware, productsController.getAddProduct);
+router.get("/form",  productsController.getAddProduct);
 
-router.post("/form", authMiddleware, productsController.postAddProduct);
+router.post("/form",  productsController.postAddProduct);
 
 module.exports = router;

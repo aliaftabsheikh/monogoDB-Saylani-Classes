@@ -1,16 +1,17 @@
 const Product = require("../models/product");
 
 exports.getAddProduct = (req, res) => {
-    res.render("form", {title: "Add Product Form"});
+    res.render("form", { title: "Add Product Form" });
 };
 
-exports.postAddProduct = (req, res) => {
+exports.postAddProduct = async (req, res) => {
     const product = new Product(req.body.title);
-    product.save();
+    console.log(req.body.title);
+    await product.save();
     res.send("Saved");
 };
 
-exports.fetchAll = (req, res) => {
-    const products = Product.fetchAll();
-    res.render("products", {products});
+exports.fetchAll = async (req, res) => {
+    const products = await Product.fetchAll();
+    res.render("products", { products });
 };

@@ -2,15 +2,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const session = require('express-session')
 const app = express();
-const DBRun = require("./db")
-DBRun().catch(console.dir)
+const {run} = require("./db")
+run().catch(console.dir)
 const path = require("path");
 
 const authRoutes = require("./routes/auth");
 const productsRoutes = require("./routes/products");
 const apiRoutes = require("./routes/api");
 
-// app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 

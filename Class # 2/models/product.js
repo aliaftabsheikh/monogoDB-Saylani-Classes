@@ -1,16 +1,21 @@
-const products = [];
+const {getConnect} = require("../db")
+// const products = [];
+// const client = getConnect();
 
 class Product {
     constructor(title) {
         this.title = title;
     }
 
-    save() {
-        products.push({title: this.title});
+    async save() {
+        const products = getConnect().db().collection("products")
+        await products.insertOne({title: this.title})
     }
 
-    static fetchAll () {
-        return products;
+    static async fetchAll () {
+        const products = getConnect().db().collection("products")
+        return await products.find();
+        
     }
 }
 
