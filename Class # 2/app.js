@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const session = require('express-session')
 const app = express();
+const DBRun = require("./db")
+DBRun().catch(console.dir)
 const path = require("path");
 
 const authRoutes = require("./routes/auth");
