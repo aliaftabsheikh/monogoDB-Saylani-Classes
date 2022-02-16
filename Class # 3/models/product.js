@@ -1,27 +1,15 @@
-const {getConnect} = require("../db")
-// const products = [];
-// const client = getConnect();
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
-class Product {
-    constructor(title) {
-        this.title = title;
-    }
+const productSchema = new Schema({
+  title:  {type: String, required : true}, // String is shorthand for {type: String}
+  price: Number,
+  ratings:   Number,
+  inStock : Boolean
+});
 
-    async save() {
-        const products = getConnect().db().collection("products")
-        await products.insertOne({title: this.title})
-    }
 
-    static async fetchAll () {
-        const products = [];
-        const productsConnect = getConnect().db().collection("products")
-        const productsCursor =  await productsConnect.find();
-        await productsCursor.forEach(product => {
-            console.log(product);
-            products.push(product)
-        });
-        return products;
-    }
-}
+const Product = mongoose.model('Product', productSchema);
+
 
 module.exports = Product;
