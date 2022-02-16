@@ -2,8 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const session = require('express-session')
 const app = express();
-const {run} = require("./db")
-run().catch(console.dir)
+const {mongoose} = require("./db")
+// run().catch(console.dir)
 const path = require("path");
 
 const authRoutes = require("./routes/auth");
@@ -53,4 +53,4 @@ app.use("/", (req, res) => {
     res.render("home", {user: "Ishaq"});
 });
 
-app.listen(5000);
+app.listen(4000);

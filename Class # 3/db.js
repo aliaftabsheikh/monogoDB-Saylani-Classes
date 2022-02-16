@@ -1,31 +1,9 @@
-const { MongoClient } = require("mongodb");
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/test');
 
-const uri = "mongodb://127.0.0.1:27017/shop";
+const Cat = mongoose.model('Cat', { name: String });
 
-const client = new MongoClient(uri);
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));
 
-let connect;
-
-async function run() {
-    try {
-      // Connect the client to the server
-      await client.connect();
-      // Establish and verify connection
-      await client.db().command({ ping: 1 });
-      connect = client;
-      console.log("Connected successfully to server");
-    } finally {
-      // Ensures that the client will close when you finish/error
-    //   await client.close(); 
-    }
-  }
-
-  function getConnect(){
-      if(!connect){
-          throw new Error("DataBase not Connected")
-      }else{
-          return connect;
-      }
-  }
-
-module.exports = {run, getConnect};
+module.exports = {mongoose};
