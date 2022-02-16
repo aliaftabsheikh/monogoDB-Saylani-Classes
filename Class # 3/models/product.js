@@ -2,10 +2,14 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-  title:  {type: String, required : true}, // String is shorthand for {type: String}
-  price: Number,
-  ratings:   Number,
-  inStock : Boolean
+    title: { type: String, required: true }, // String is shorthand for {type: String}
+    price: Number,
+    ratings: Number,
+    inStock: Boolean
+});
+
+productSchema.static('findByTitle', function (title) {
+    return this.find({ title });
 });
 
 
