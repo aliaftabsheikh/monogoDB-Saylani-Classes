@@ -40,9 +40,11 @@ router.patch('/post/:id', async (req, res) => {
     }
 })
 
-router.delete('/post/:index', (req, res) => {
-    const index = req.params.index;
-    posts.splice(index, 1)
+router.delete('/post/:id',async (req, res) => {
+    const id = req.params.id;
+    const postsConnect = getConnect().db().collection("posts")
+    await postsConnect.deleteOne({ _id : ObjectId(id)});
+    const posts = await getAllPosts();
     res.status(201).json(posts)
 })
 
