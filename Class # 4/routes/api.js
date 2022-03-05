@@ -59,5 +59,12 @@ router.post('/order',async (req, res) => {
     res.send("Saved");
 })
 
+router.get('/order',async (req, res) => {
+    const orders = await Order.find()
+    .populate("products", "inStock title price")
+    .exec();
+    res.json(orders);
+})
+
 
 module.exports = router;
