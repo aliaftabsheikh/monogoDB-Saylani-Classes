@@ -6,7 +6,7 @@ const productSchema = new Schema({
     price: {
         type: Number,
         validate: {
-            validator : (val)=>{
+             validator : (val)=>{
                 return val > 0;
             }, 
             message : 'Price cannot be less then 0'

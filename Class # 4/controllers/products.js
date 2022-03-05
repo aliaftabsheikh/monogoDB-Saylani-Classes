@@ -7,9 +7,10 @@ exports.getAddProduct = (req, res) => {
 exports.postAddProduct = async (req, res) => {
     const product = new Product({
         title : req.body.title,
-        price : 100,
-        ratings : 4.2,
-        inStock : true
+        price : req.body.price,
+        ratings : req.body.ratings,
+        inStock : req.body.inStock,
+        description : req.body.description
     });
    
     await product.save();
