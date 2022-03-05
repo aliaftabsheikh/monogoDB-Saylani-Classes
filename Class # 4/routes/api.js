@@ -3,6 +3,8 @@ const router = express.Router();
 const {ObjectId} = require('mongodb')
 const { getConnect } = require("../db")
 const Order = require("../models/order")
+const User = require("../models/user")
+
 
 const posts = [{ title: 'My Title', descreption: 'My Description' }];
 
@@ -66,5 +68,15 @@ router.get('/order',async (req, res) => {
     res.json(orders);
 })
 
+router.post('/user',async (req, res) => {
+    const order = new User ({
+        fullName : req.body.fullName,
+        email :  req.body.email,
+        password :  req.body.password
+    });
+   
+    await order.save();
+    res.send("Saved");
+})
 
 module.exports = router;

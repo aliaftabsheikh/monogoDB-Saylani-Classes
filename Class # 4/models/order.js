@@ -16,7 +16,7 @@ const orderSchema = new Schema({
             type : mongoose.Types.ObjectId,
             ref: "Product"
         }
-    ]
+    ] 
 });
 
 orderSchema.static('findByTitle', function (title) {
