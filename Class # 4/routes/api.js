@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {ObjectId} = require('mongodb')
 const { getConnect } = require("../db")
+const Order = require("../models/order")
 
 const posts = [{ title: 'My Title', descreption: 'My Description' }];
 
@@ -46,6 +47,16 @@ router.delete('/post/:id',async (req, res) => {
     await postsConnect.deleteOne({ _id : ObjectId(id)});
     const posts = await getAllPosts();
     res.status(201).json(posts)
+})
+
+router.post('/order',async (req, res) => {
+    const order = new Order({
+        amount : req.body.amount,
+        products : req.body.products
+    });
+   
+    await order.save();
+    res.send("Saved");
 })
 
 

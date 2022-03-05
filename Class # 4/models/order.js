@@ -19,7 +19,7 @@ const orderSchema = new Schema({
     ]
 });
 
-productSchema.static('findByTitle', function (title) {
+orderSchema.static('findByTitle', function (title) {
     return this.find({ title });
 });
 
